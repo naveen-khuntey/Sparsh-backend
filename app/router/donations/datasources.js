@@ -6,7 +6,7 @@ const find = async(appID) => {
 }
 
 const create = async (donation) => {
-    const {name, phone, blood, bmi, pin} = donation;
+    const {name, phone, blood, bmi, pin} = donation; 
     const newDonation = await model.create({
         name,
         phone,
@@ -15,7 +15,7 @@ const create = async (donation) => {
         pin
     });
 
-    return newDonTION;
+    return newDonation;
 }
 
 module.exports = {

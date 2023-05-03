@@ -10,15 +10,15 @@ router.get('/:appId', async (req, res) => {
         res.json(donation);
     } catch (error) {
         res.end('Internal server error');
-    }
+    } 
 });
 
 router.post('/', async (req, res) => {
     const donation = req.body;
     try {
-        const createDontion = await datasources.create(donation);
-        console.log(createDontion);
-        res.json(createDontion);
+        const createDonation = await datasources.create(donation);
+        console.log(createDonation);
+        res.json(createDonation);
     } catch (error) {
         res.json(error);
     }

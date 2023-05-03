@@ -9,7 +9,7 @@ const AppointmentSchema = new Schema({
     email: {
         type: String,
         required: true
-    },
+    }, 
     phone: {
         type: Number,
         required: true

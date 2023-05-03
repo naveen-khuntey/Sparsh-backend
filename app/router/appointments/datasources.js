@@ -4,7 +4,7 @@ const find = async(appID) => {
     const appointment = await model.findById(appID);
     return appointment;
 }
-
+ 
 const create = async (appointment) => {
     const {name, date, phone, email} = appointment;
  

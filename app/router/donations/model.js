@@ -5,9 +5,9 @@ const donationSchema = new Schema({
     name: {
         type: String,
         required: true
-    }, 
+    },  
     phone: {
-        type: Number,
+        type: Number, 
         required: true
     },
     blood : {
@@ -18,4 +18,4 @@ const donationSchema = new Schema({
     pin : Number,
 });
 
-module.exports = mongoose.model('donation', donationSchema);
+module.exports = mongoose.model('donation' , donationSchema);

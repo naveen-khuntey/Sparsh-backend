@@ -3,7 +3,7 @@ const datasources = require('./datasources');
 
 const router = express.Router();
 
-router.get('/:appId', async (req, res) => {
+router.get('/:appId', async (req, res) => { 
     const {appId} = req.params;
     try {
         const appointment = await datasources.find(appId);
