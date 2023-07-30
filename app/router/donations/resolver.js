@@ -2,7 +2,14 @@ const express = require('express');
 const datasources = require('./datasources');
 
 const router = express.Router();
-
+router.get('/', async (req,res) => {
+    try {
+        const donation = await datasources.find1();
+        res.json(donation);
+    } catch (error) {
+        res.end('Internal server error');
+    } 
+})
 router.get('/:appId', async (req, res) => {
     const {appId} = req.params;
     try {

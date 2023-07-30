@@ -1,5 +1,9 @@
 const model = require("./model");
 
+const find1 = async() => {
+    const donation = await model.find();
+    return donation;
+}
 const find = async(appID) => {
     const donation = await model.findById(appID);
     return donation;
@@ -20,5 +24,6 @@ const create = async (donation) => {
 
 module.exports = {
     create,
-    find
+    find,
+    find1
 }

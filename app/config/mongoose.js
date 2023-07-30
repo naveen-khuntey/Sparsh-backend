@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
-
+require('dotenv').config();
+const url = process.env.MONGO_URL;
 const INIT = async () => {
-    await mongoose.connect('mongodb+srv://sparsh:sparsh@cluster0.hvrkrmt.mongodb.net/sparsh').then(console.log('Server : Mongoose Connected'));
+    await mongoose.connect(url).then(console.log('Server : Mongoose Connected'));
 };
 
 module.exports = INIT;

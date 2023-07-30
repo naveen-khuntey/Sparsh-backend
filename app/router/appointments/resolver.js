@@ -3,6 +3,12 @@ const datasources = require('./datasources');
 
 const router = express.Router();
 
+
+router.get('/',async (req,res)=>{
+    const data = await datasources.find1();
+    if(data) res.send(data);
+    else res.send({none : "ok"});
+})
 router.get('/:appId', async (req, res) => { 
     const {appId} = req.params;
     try {
