@@ -1,9 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const mongooseInit = require('./config/mongoose');
-const appointmentRouter = require('./router/appointments/resolver')
-const dontionRouter = require('./router/donations/resolver')
+const mongooseInit = require('./app/config/mongoose');
+const appointmentRouter = require('./app/router/appointments/resolver')
+const dontionRouter = require('./app/router/donations/resolver')
 require('dotenv').config();
 const app = express();
 mongooseInit();
